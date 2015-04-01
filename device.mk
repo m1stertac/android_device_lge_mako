@@ -278,6 +278,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mtp
+	
+# set USB OTG enabled to add support for USB storage type
+PRODUCT_PROPERTY_OVERRIDES += \
+        persist.sys.isUsbOtgEnabled=1
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, hardware/qcom/msm8960/msm8960.mk)
